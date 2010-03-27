@@ -39,9 +39,11 @@ describe "Sunlight" do
     results.should_not be_nil
     results.class.should be_eql(Array)
     results.length.should be_eql(1)
-    puts "results[0] #{results[0].inspect}"
+
     results[0].title.should be_eql("STYLE GUIDE FOR WRITING")
     results[0].content_type.should be_eql("application/pdf")
+    puts "****************** doc_id #{results[0].id}"
+    results[0].id.should be_eql("test1")
   end  
 
 
