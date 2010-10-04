@@ -1,24 +1,48 @@
-
-
+# Copyright (c) 2010 Robert Lasch and Ryan Stawarz
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+#
 module Sunlight
-  
+ 
+  # This is the result set 
   class Result
-    attr_accessor :author, :content_type, :id, :title
-    
     def initialize
       @attrs = {}
     end
     
-    def method_missing(id, value)
+    def method_missing(id, *value)
       str = id.id2name
-      if str =~ /=$/
-        @attrs[id] = value
-      else
-        if @attrs[id]
-          return @attrs[id] 
+      if (value.length == 1)
+        if str =~ /^(.*)=$/
+          index = $1
+          @attrs[index.to_sym] = value[0]
+        else
+          raise "Missing method: #{str}"
+        end
+      elsif (value.length == 0)
+        if @attrs.include?(id)
+          return @attrs[id]
         else
           return nil
         end
+      else
+        raise "Illegal number of arguments given (#{value.length})"
       end
     end
   end
