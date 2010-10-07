@@ -10,7 +10,6 @@ Sunlight is a lightweight package used to access Apache Solr, specifically the S
 
 I know, I know...  this is coming very soon.
 
-
 == REQUIREMENTS:
 
 The following gems are required:
