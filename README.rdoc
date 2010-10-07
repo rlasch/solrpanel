@@ -8,6 +8,7 @@ Sunlight is a lightweight package used to access Apache Solr, specifically the S
 
 == SYNOPSIS:
 
+I know, I know...  this is coming very soon.
 
 
 == REQUIREMENTS:
