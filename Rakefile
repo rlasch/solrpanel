@@ -1,26 +1,13 @@
-require 'rubygems'
-gem 'hoe', '>= 2.1.0'
-require 'hoe'
-require 'fileutils'
-require './lib/sunlight'
+require 'echoe'
 
-Hoe.plugin :newgem
-# Hoe.plugin :website
-# Hoe.plugin :cucumberfeatures
-
-# Generate all the Rake tasks
-# Run 'rake -T' to see list of generated tasks (from gem root directory)
-$hoe = Hoe.spec 'sunlight' do
-  self.developer 'FIXME full name', 'FIXME email'
-  self.post_install_message = 'PostInstall.txt' # TODO remove if post-install message not required
-  self.rubyforge_name       = self.name # TODO this is default value
-  # self.extra_deps         = [['activesupport','>= 2.0.2']]
-
+Echoe.new('sunlight', '0.1.0') do |p|
+  p.author = "Ryan Stawarz and Robert Lasch"
+  p.summary = "A client for connecting to Apache Solr Cell."
+  p.url = "http://github.com/rlasch/sunlight"
+  p.docs_host = ""
+  p.ignore_pattern = ['tmp/*', 'script/*']
+  p.runtime_dependencies = ["httpclient >=2.1.5.2", "nokogiri >=1.4.3.1"]
 end
 
-require 'newgem/tasks'
-Dir['tasks/**/*.rake'].each { |t| load t }
+Dir["#{File.dirname(__FILE__)}/tasks/*.rake"].sort.each { |ext| load ext }
 
-# TODO - want other tests/tasks run by default? Add them to the list
-# remove_task :default
-# task :default => [:spec, :features]

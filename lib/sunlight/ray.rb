@@ -19,10 +19,6 @@
 # THE SOFTWARE.
 # 
 
-require 'rubygems'
-require 'httpclient'
-require 'nokogiri'
-require 'sunlight/result'
 
 # Sunlight is a very simple, lightweight library for accessing Apache Solr.  
 module Sunlight

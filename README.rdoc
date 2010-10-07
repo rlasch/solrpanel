@@ -1,26 +1,26 @@
-= sunlight
+= Sunlight
 
 * http://github.com/#{github_username}/#{project_name}
 
 == DESCRIPTION:
 
-FIX (describe your package)
-
-== FEATURES/PROBLEMS:
-
-* FIX (list of features or problems)
+Sunlight is a lightweight package used to access Apache Solr, specifically the Solr Cell module.
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+The following gems are required:
+* httpclient
+* nokogiri
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+This should come as no surpise:
+
+sudo gem install sunlight
 
 == LICENSE:
 
