@@ -22,7 +22,7 @@ require 'rubygems'
 require 'httpclient'
 require 'nokogiri'
 require File.dirname(__FILE__) + '/solrpanel/result'
-require File.dirname(__FILE__) + '/solrpanel/ray'
+require File.dirname(__FILE__) + '/solrpanel/solrpanel'
 
 # SolrPanel is a very simple, lightweight library for accessing Apache Solr.  
 module SolrPanel
