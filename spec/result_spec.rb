@@ -2,10 +2,10 @@ require File.dirname(__FILE__) + '/spec_helper.rb'
 
 # Time to add your specs!
 # http://rspec.info/
-describe "Sunlight::Result" do
+describe "SolrPanel::Result" do
 
   before(:each) do
-    @result = Sunlight::Result.new()
+    @result = SolrPanel::Result.new()
   end
   
   it "should set a value" do

@@ -1,10 +1,10 @@
-= Sunlight
+= SolrPanel
 
-* http://github.com/#{github_username}/#{project_name}
+* http://github.com/rlasch/solrpanel
 
 == DESCRIPTION:
 
-Sunlight is a lightweight package used to access Apache Solr, specifically the Solr Cell module.
+SolrPanel is a lightweight package used to access Apache Solr, specifically the Solr Cell module.
 
 == SYNOPSIS:
 
@@ -20,7 +20,7 @@ The following gems are required:
 
 This should come as no surpise:
 
-sudo gem install sunlight
+sudo gem install solrpanel
 
 == LICENSE:
 

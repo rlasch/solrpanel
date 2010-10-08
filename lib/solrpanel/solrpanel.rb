@@ -20,11 +20,11 @@
 # 
 
 
-# Sunlight is a very simple, lightweight library for accessing Apache Solr.  
-module Sunlight
+# SolrPanel is a very simple, lightweight library for accessing Apache Solr.  
+module SolrPanel
   VERSION = '0.0.1'
   
-  # Main client for the Sunlight library.
+  # Main client for the SolrPanel library.
   class Ray
     attr_accessor :base_url
     attr_accessor :default_query_parameters
@@ -89,7 +89,7 @@ module Sunlight
       results = []
       xml = Nokogiri::XML(response.body.content)
       xml.xpath('//doc').each() do |doc|
-        r = Sunlight::Result.new()
+        r = SolrPanel::Result.new()
         
         doc.traverse() do |element|
           name = element['name'] if element['name']

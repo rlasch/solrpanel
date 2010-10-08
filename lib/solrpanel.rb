@@ -21,10 +21,10 @@
 require 'rubygems'
 require 'httpclient'
 require 'nokogiri'
-require File.dirname(__FILE__) + '/sunlight/result'
-require File.dirname(__FILE__) + '/sunlight/ray'
+require File.dirname(__FILE__) + '/solrpanel/result'
+require File.dirname(__FILE__) + '/solrpanel/ray'
 
-# Sunlight is a very simple, lightweight library for accessing Apache Solr.  
-module Sunlight
+# SolrPanel is a very simple, lightweight library for accessing Apache Solr.  
+module SolrPanel
   VERSION = '0.0.1'
 end

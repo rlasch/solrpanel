@@ -1,20 +1,20 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{sunlight}
+  s.name = %q{solrpanel}
   s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ryan Stawarz and Robert Lasch"]
-  s.date = %q{2010-10-06}
+  s.date = %q{2010-10-07}
   s.description = %q{A client for connecting to Apache Solr Cell.}
   s.email = %q{}
-  s.extra_rdoc_files = ["README.rdoc", "lib/sunlight.rb", "lib/sunlight/ray.rb", "lib/sunlight/result.rb", "tasks/rspec.rake"]
-  s.files = ["History.txt", "Manifest", "Manifest.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "Rakefile.old", "lib/sunlight.rb", "lib/sunlight/ray.rb", "lib/sunlight/result.rb", "spec/ray_spec.rb", "spec/result_spec.rb", "spec/spec.opts", "spec/spec_helper.rb", "spec/test1.pdf", "spec/test2.pdf", "tasks/rspec.rake", "sunlight.gemspec"]
-  s.homepage = %q{http://github.com/rlasch/sunlight}
-  s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Sunlight", "--main", "README.rdoc"]
+  s.extra_rdoc_files = ["README.rdoc", "lib/solrpanel.rb", "lib/solrpanel/result.rb", "lib/solrpanel/solrpanel.rb", "tasks/rspec.rake"]
+  s.files = ["History.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "lib/solrpanel.rb", "lib/solrpanel/result.rb", "lib/solrpanel/solrpanel.rb", "solrpanel.gemspec", "spec/ray_spec.rb", "spec/result_spec.rb", "spec/spec.opts", "spec/spec_helper.rb", "tasks/rspec.rake", "Manifest"]
+  s.homepage = %q{http://github.com/rlasch/solrpanel}
+  s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Solrpanel", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
-  s.rubyforge_project = %q{sunlight}
+  s.rubyforge_project = %q{solrpanel}
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{A client for connecting to Apache Solr Cell.}
 

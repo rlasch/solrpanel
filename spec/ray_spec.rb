@@ -2,39 +2,39 @@ require File.dirname(__FILE__) + '/spec_helper.rb'
 
 # Time to add your specs!
 # http://rspec.info/
-describe "Sunlight::Ray" do
+describe "SolrPanel::Ray" do
 
   before(:each) do
-    @sunlight = Sunlight::Ray.new
-    results = @sunlight.search 'comma'  
+    @solrpanel = SolrPanel::Ray.new
+    results = @solrpanel.search 'comma'  
     results.each() do |r|
-      @sunlight.delete(r.id)
+      @solrpanel.delete(r.id)
     end
-    @sunlight.commit()
+    @solrpanel.commit()
   end
   
   after(:each) do
-    @sunlight.delete("test1")
-    @sunlight.delete("test2")
-    @sunlight.commit()
+    @solrpanel.delete("test1")
+    @solrpanel.delete("test2")
+    @solrpanel.commit()
   end
   
   
   it "should update a document in the index" do
-    results = @sunlight.update 'spec/test1.pdf', 'test1'
+    results = @solrpanel.update 'spec/test1.pdf', 'test1'
     results.should_not be_nil
 
-    @sunlight.commit
+    @solrpanel.commit
   end  
   
 
   it "should find documents when searching" do
-    results = @sunlight.update 'spec/test1.pdf', 'test1'
+    results = @solrpanel.update 'spec/test1.pdf', 'test1'
     results.should_not be_nil
 
-    @sunlight.commit
+    @solrpanel.commit
 
-    results = @sunlight.search 'comma'  
+    results = @solrpanel.search 'comma'  
     results.should_not be_nil
     results.class.should be_eql(Array)
     results.length.should be_eql(1)
@@ -46,7 +46,7 @@ describe "Sunlight::Ray" do
 
 
   it "should not find documents when searching an empty index" do
-    results = @sunlight.search 'comma'  
+    results = @solrpanel.search 'comma'  
     results.should_not be_nil
     results.class.should be_eql(Array)
     results.length.should be_eql(0)
