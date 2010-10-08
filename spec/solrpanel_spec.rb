@@ -6,7 +6,7 @@ describe "SolrPanel::Ray" do
 
   before(:each) do
     @solrpanel = SolrPanel::Ray.new
-    results = @solrpanel.search 'comma'  
+    results = @solrpanel.search 'test'  
     results.each() do |r|
       @solrpanel.delete(r.id)
     end
@@ -20,7 +20,7 @@ describe "SolrPanel::Ray" do
   end
   
   
-  it "should update a document in the index" do
+  it "should update a document in the index" do    
     results = @solrpanel.update 'spec/test1.pdf', 'test1'
     results.should_not be_nil
 
@@ -34,19 +34,20 @@ describe "SolrPanel::Ray" do
 
     @solrpanel.commit
 
-    results = @solrpanel.search 'comma'  
+    results = @solrpanel.search 'test'  
     results.should_not be_nil
     results.class.should be_eql(Array)
+    puts "Results: #{results.length}"
     results.length.should be_eql(1)
 
-    results[0].title.should be_eql("STYLE GUIDE FOR WRITING")
+    puts "Title: #{results[0].title}"
     results[0].content_type.should be_eql("application/pdf")
     results[0].id.should be_eql("test1")
   end  
 
 
   it "should not find documents when searching an empty index" do
-    results = @solrpanel.search 'comma'  
+    results = @solrpanel.search 'another'  
     results.should_not be_nil
     results.class.should be_eql(Array)
     results.length.should be_eql(0)
