@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ryan Stawarz and Robert Lasch"]
-  s.date = %q{2010-10-07}
+  s.date = %q{2010-10-10}
   s.description = %q{A client for connecting to Apache Solr Cell.}
   s.email = %q{}
   s.extra_rdoc_files = ["README.rdoc", "lib/solrpanel.rb", "lib/solrpanel/result.rb", "lib/solrpanel/solrpanel.rb", "tasks/rspec.rake"]
-  s.files = ["History.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "lib/solrpanel.rb", "lib/solrpanel/result.rb", "lib/solrpanel/solrpanel.rb", "solrpanel.gemspec", "spec/ray_spec.rb", "spec/result_spec.rb", "spec/spec.opts", "spec/spec_helper.rb", "tasks/rspec.rake", "Manifest"]
+  s.files = ["History.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "lib/solrpanel.rb", "lib/solrpanel/result.rb", "lib/solrpanel/solrpanel.rb", "solrpanel.gemspec", "tasks/rspec.rake", "Manifest"]
   s.homepage = %q{http://github.com/rlasch/solrpanel}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Solrpanel", "--main", "README.rdoc"]
   s.require_paths = ["lib"]

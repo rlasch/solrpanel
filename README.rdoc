@@ -8,7 +8,14 @@ SolrPanel is a lightweight package used to access Apache Solr, specifically the 
 
 == SYNOPSIS:
 
-I know, I know...  this is coming very soon.
+Adding Documents
+
+
+Deleting Documents
+
+
+Searching Documents
+
 
 == REQUIREMENTS:
 
@@ -26,7 +33,7 @@ sudo gem install solrpanel
 
 (The MIT License)
 
-Copyright (c) 2010 FIXME full name
+Copyright (c) 2010 Robert Lasch and Ryan Stawarz
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
