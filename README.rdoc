@@ -4,7 +4,7 @@
 
 == DESCRIPTION:
 
-SolrPanel is a lightweight package used to access Apache Solr, specifically the Solr Cell module.
+SolrPanel is a lightweight package used to access Apache Solr, specifically the Solr Cell module.  It is far from what would be called full feature.  As this library matures, I'm hoping to fill out the functionality.
 
 == SYNOPSIS:
 
