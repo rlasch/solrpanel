@@ -10,11 +10,32 @@ SolrPanel is a lightweight package used to access Apache Solr, specifically the 
 
 Adding Documents
 
+To add a document, invoke update and commit on a Solr::Panel instance.
+
+      solr = SolrPanel::Client.new
+      solr.update(document.source.path, document.id, {'literal.company_id' => document.company_id})
+      solr.commit
+
 
 Deleting Documents
 
+To delete a document, invoke delete and commit on a Solr::Panel instance.
+      solr = SolrPanel::Client.new
+      solr.delete(document_id)
+      solr.commit
+
 
 Searching Documents
+
+To search for documents, class the search method with the search string.
+
+    sunlight = SolrPanel::Client.new
+    @results = sunlight.search(@search.search_string)
+    if @results
+      doc_list = @results.collect() do |r|  
+        r.id
+      end
+    end
 
 
 == REQUIREMENTS:
