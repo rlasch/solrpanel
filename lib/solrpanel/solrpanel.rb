@@ -25,7 +25,7 @@ module SolrPanel
   VERSION = '0.0.1'
   
   # Main client for the SolrPanel library.
-  class Ray
+  class Client
     attr_accessor :base_url
     attr_accessor :default_query_parameters
     

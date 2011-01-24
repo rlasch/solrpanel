@@ -2,10 +2,10 @@ require File.dirname(__FILE__) + '/spec_helper.rb'
 
 # Time to add your specs!
 # http://rspec.info/
-describe "SolrPanel::Ray" do
+describe "SolrPanel::Client" do
 
   before(:each) do
-    @solrpanel = SolrPanel::Ray.new
+    @solrpanel = SolrPanel::Client.new
     results = @solrpanel.search 'test'  
     results.each() do |r|
       @solrpanel.delete(r.id)
