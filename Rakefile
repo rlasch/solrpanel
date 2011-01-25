@@ -1,6 +1,6 @@
 require 'echoe'
 
-Echoe.new('solrpanel', '0.1.0') do |p|
+Echoe.new('solrpanel', '0.1.1') do |p|
   p.author = "Ryan Stawarz and Robert Lasch"
   p.summary = "A client for connecting to Apache Solr Cell."
   p.url = "http://github.com/rlasch/solrpanel"
